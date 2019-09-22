@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from enum import Enum
+from datetime import date
+
 # Create your models here.
 class PositionChoice(Enum): 
     EMP = "Employee"
@@ -18,4 +20,8 @@ class Profile(models.Model):
       choices=[(tag, tag.value) for tag in PositionChoice]  # Choices is a list of Tuple
     )
     
+class Projects(models.Model):
+    title = models.CharField(max_length=20),
+    desc = models.TextField(),
+    deadline = models.DateField(_("Date"), default=datetime.date.today)
     
