@@ -4,9 +4,20 @@ from .import views
 
 urlpatterns = [
     path('login',views.login,name ='login'),
-    path('',views.home,name='home'),
+
+
+
+    path('',views.home,name='home'),  
     path('employee',views.emp,name='employee'),
     path('rating',views.rating,name = 'rating'),
+<<<<<<< Updated upstream
     path('projectForm',views.projectForm,name='project'),
     path('teamLeader',views.teamLeader,name='leader')
+=======
+    path('projectForm',views.projectForm,name='project')
+    path('teamLeader',views.teamLeader,name='leader')
+
+
+    
+>>>>>>> Stashed changes
 ]
