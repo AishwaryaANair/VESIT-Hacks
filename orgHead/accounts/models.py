@@ -14,7 +14,7 @@ class PositionChoice(Enum):
 class Teams(models.Model):
     teamName = models.CharField(max_length = 200)
     teamLeader =  models.OneToOneField(User, on_delete = models)
-    time = models.DateTimeField(default = datetime_safe.datetime.now())
+    time = models.DateTimeField(default = date.today)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -48,7 +48,7 @@ class UserReport(models.Model):
     projectid= models.ForeignKey(
         Projects, on_delete=models.CASCADE)
     empid= models.ForeignKey(
-        Users, on_delete=models.CASCADE)
+        User, on_delete=models.CASCADE)
     teamid= models.ForeignKey(
         Teams, on_delete=models.CASCADE)
     
