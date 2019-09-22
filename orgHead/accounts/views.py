@@ -10,3 +10,6 @@ def home(request):
     
 def emp(request):
     return render(request,'accounts/emp.html')
+
+def rating(request):
+    return render(request,'accounts/ratingForm.html')
