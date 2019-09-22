@@ -25,6 +25,7 @@ class Profile(models.Model):
       choices=[(tag, tag.value) for tag in PositionChoice]  # Choices is a list of Tuple
     )
 
+
 class Projects(models.Model):
     teamid = models.ForeignKey(
       Teams,on_delete = models.CASCADE),
@@ -32,11 +33,25 @@ class Projects(models.Model):
     desc = models.TextField(),
     deadline = models.DateField(("Date"), default=date.today)
     
-    deadline = models.DateField(_("Date"), default=datetime.date.today)
 
-class ProjectReport(model.Model):
+
+class ProjectReport(models.Model):
     teamid = models.ForeignKey(
-      Teams,on_delete = models.CASCADE),
-    time = models.DateField(_("Date"), default=datetime.date.today),
+     Teams,on_delete = models.CASCADE),
+    time = models.DateField(("Date"), default=date.today),
     pid = models.ForeignKey(
           Projects,on_delete=models.CASCADE)
+
+    
+class UserReport(models.Model):
+    time = models.DateField(("Date"), default = date.today)
+    projectid= models.ForeignKey(
+        Projects, on_delete=models.CASCADE)
+    empid= models.ForeignKey(
+        Users, on_delete=models.CASCADE)
+    teamid= models.ForeignKey(
+        Teams, on_delete=models.CASCADE)
+    
+
+
+    
