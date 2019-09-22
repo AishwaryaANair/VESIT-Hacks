@@ -19,7 +19,7 @@ class Teams(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     type = models.TextField(max_length=500)
-    teamId = models.ForeignKey(Teams, on_delete = models.SET_NULL)
+    teamId = models.ForeignKey(Teams, on_delete = models.CASCADE)
     position = models.CharField(
     max_length=20,
       choices=[(tag, tag.value) for tag in PositionChoice]  # Choices is a list of Tuple
