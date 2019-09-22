@@ -6,5 +6,7 @@ def login(request):
     return render(request,'accounts/signandsignup.html')
 
 def home(request): 
-    return render(request,'/home.html')
+    return render(request,'home.html')
     
+def emp(request):
+    return render(request,'accounts/emp.html')
