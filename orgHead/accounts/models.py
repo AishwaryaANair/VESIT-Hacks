@@ -30,13 +30,11 @@ class Projects(models.Model):
       Teams,on_delete = models.CASCADE),
     title = models.CharField(max_length=20),
     desc = models.TextField(),
-    deadline = models.DateField(("Date"), default=date.today)
-    
-    deadline = models.DateField(_("Date"), default=datetime.date.today)
+    deadline = models.DateField(default=date.today)
 
-class ProjectReport(model.Model):
+class ProjectReport(models.Model):
     teamid = models.ForeignKey(
       Teams,on_delete = models.CASCADE),
-    time = models.DateField(_("Date"), default=datetime.date.today),
+    time = models.DateField(default=date.today),
     pid = models.ForeignKey(
           Projects,on_delete=models.CASCADE)

@@ -7,5 +7,5 @@ def amit(request):
 def teamProgress(request):
     return render(request,'teamDash/teamProgress.html')
 
-def teamStructure.html(request):
+def teamStructure(request):
     return render(request,'teamDash/teamStructure.html')

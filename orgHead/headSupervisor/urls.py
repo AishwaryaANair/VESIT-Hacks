@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('',views.amit,name = 'headSupervisor'),
-    path('teamProgress',views.teamProgress,name='teamProgress')
-    path('teamProgress',views.teamStructure,name='teamStructure')
+    path('teamProgress',views.teamProgress,name='teamProgress'),
+    path('teamPStructure',views.teamStructure,name='teamStructure')
 ]
