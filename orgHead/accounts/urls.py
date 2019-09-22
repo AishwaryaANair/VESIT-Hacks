@@ -10,14 +10,9 @@ urlpatterns = [
     path('',views.home,name='home'),  
     path('employee',views.emp,name='employee'),
     path('rating',views.rating,name = 'rating'),
-<<<<<<< Updated upstream
     path('projectForm',views.projectForm,name='project'),
-    path('teamLeader',views.teamLeader,name='leader')
-=======
-    path('projectForm',views.projectForm,name='project')
     path('teamLeader',views.teamLeader,name='leader')
 
 
     
->>>>>>> Stashed changes
 ]
