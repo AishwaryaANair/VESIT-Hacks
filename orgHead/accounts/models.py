@@ -31,6 +31,14 @@ class Projects(models.Model):
       Teams,on_delete = models.CASCADE),
     title = models.CharField(max_length=20),
     desc = models.TextField(),
+<<<<<<< HEAD
+    deadline = models.DateField(default=date.today)
+
+class ProjectReport(models.Model):
+    teamid = models.ForeignKey(
+      Teams,on_delete = models.CASCADE),
+    time = models.DateField(default=date.today),
+=======
     deadline = models.DateField(("Date"), default=date.today)
     
 
@@ -39,6 +47,7 @@ class ProjectReport(models.Model):
     teamid = models.ForeignKey(
      Teams,on_delete = models.CASCADE),
     time = models.DateField(("Date"), default=date.today),
+>>>>>>> master
     pid = models.ForeignKey(
           Projects,on_delete=models.CASCADE)
 
