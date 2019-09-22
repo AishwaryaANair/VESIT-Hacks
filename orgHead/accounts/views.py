@@ -8,3 +8,5 @@ def login(request):
 def home(request): 
     return render(request,'home.html')
     
+def emp(request):
+    return render(request,'accounts/emp.html')
