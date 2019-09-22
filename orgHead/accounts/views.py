@@ -5,3 +5,6 @@ from django.shortcuts import render
 def login(request):
     return render(request,'accounts/signandsignup')
 
+def home(request): 
+    return render(request,'home.html')
+    
