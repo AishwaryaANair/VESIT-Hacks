@@ -13,3 +13,6 @@ def emp(request):
 
 def rating(request):
     return render(request,'accounts/ratingForm.html')
+
+def projectForm(request):
+    return render(request,'accounts/projectForm.html')
