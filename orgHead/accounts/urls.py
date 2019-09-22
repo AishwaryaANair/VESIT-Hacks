@@ -4,9 +4,6 @@ from .import views
 
 urlpatterns = [
     path('login',views.login,name ='login'),
-
-
-
     path('',views.home,name='home'),  
     path('employee',views.emp,name='employee'),
     path('rating',views.rating,name = 'rating'),
