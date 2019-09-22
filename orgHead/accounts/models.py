@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.utils import datetime_safe
 from enum import Enum
 from datetime import date
 
@@ -11,17 +11,22 @@ class PositionChoice(Enum):
     FM = "Manager"
     HS = "Head Supervisor"
 
+class Teams(models.Model):
+    teamName = models.CharField(max_length = 200)
+    teamLeader =  models.OneToOneField(User, on_delete = models)
+    time = models.DateTimeField(default = datetime_safe.datetime.now())
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     type = models.TextField(max_length=500)
-    teamName = models.ForeignKey(Team, on_delete = models.SET_NULL)
+    teamId = models.ForeignKey(Teams, on_delete = models.SET_NULL)
     position = models.CharField(
     max_length=20,
       choices=[(tag, tag.value) for tag in PositionChoice]  # Choices is a list of Tuple
     )
-    
+
 class Projects(models.Model):
     title = models.CharField(max_length=20),
     desc = models.TextField(),
-    deadline = models.DateField(_("Date"), default=datetime.date.today)
+    deadline = models.DateField(("Date"), default=date.today)
     

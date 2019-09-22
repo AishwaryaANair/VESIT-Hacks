@@ -8,5 +8,5 @@ urlpatterns = [
     path('employee',views.emp,name='employee'),
     path('rating',views.rating,name = 'rating'),
     path('projectForm',views.projectForm,name='project')
-    path('teamLeader'views.teamLeader,name='leader')
+    path('teamLeader',views.teamLeader,name='leader')
 ]
