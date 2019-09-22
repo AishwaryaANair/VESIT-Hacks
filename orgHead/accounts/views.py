@@ -16,3 +16,6 @@ def rating(request):
 
 def projectForm(request):
     return render(request,'accounts/projectForm.html')
+
+def teamLeader(request):
+    return render(request,'accounts/Team_leader.html')
