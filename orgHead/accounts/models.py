@@ -26,7 +26,17 @@ class Profile(models.Model):
     )
 
 class Projects(models.Model):
+    teamid = models.ForeignKey(
+      Teams,on_delete = models.CASCADE),
     title = models.CharField(max_length=20),
     desc = models.TextField(),
     deadline = models.DateField(("Date"), default=date.today)
     
+    deadline = models.DateField(_("Date"), default=datetime.date.today)
+
+class ProjectReport(model.Model):
+    teamid = models.ForeignKey(
+      Teams,on_delete = models.CASCADE),
+    time = models.DateField(_("Date"), default=datetime.date.today),
+    pid = models.ForeignKey(
+          Projects,on_delete=models.CASCADE)
