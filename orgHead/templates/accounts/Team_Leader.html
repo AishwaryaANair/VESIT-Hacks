@@ -45,6 +45,7 @@
 
 
     <!-- Page Content -->
+    {% for title in title%}
     <div class="container">
 
       <!-- Page Heading -->
@@ -53,70 +54,10 @@
 
       <!-- Project One -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="images/PROJ1.png" alt="">
-          </a>
-        </div>
         <div class="col-md-5">
-          <h3>Project 1</h3>
-          <p>Core Project of Vesit.</p>
+          <h3>{{title.title}}</h3>
+          <p>{{title.desc}}</p>
           <a class="btn btn-primary" href="#">View Progress</a>
-          <a class="btn btn-primary" href="#">Give Rating</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Two -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="images/PROJ-2.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Two</h3>
-          <p> Core Project of Vesit</p>
-          <a class="btn btn-primary" href="#">View Progree</a>
-          <a class="btn btn-primary" href="#">Give Rating</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Three -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="images/PROJ1.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Three</h3>
-          <p>A core project of vesit</p>
-          <a class="btn btn-primary" href="#">View Progress</a>
-          <a class="btn btn-primary" href="#">Give Rating</a>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Project Four -->
-      <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="images/PROJ-2.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Four</h3>
-          <p>A core project of vesit</p>
-          <a class="btn btn-primary" href="#">View Progresss</a>
           <a class="btn btn-primary" href="#">Give Rating</a>
         </div>
       </div>
@@ -126,6 +67,7 @@
 
 
     </div>
+    {% endfor %}
     <!-- /.container -->
 
     <!-- Optional JavaScript -->
